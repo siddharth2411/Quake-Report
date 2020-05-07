@@ -77,12 +77,12 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         Date date = new Date(currentEarthquake.getDate());
 
         TextView dateTextView = (TextView) listItemView.findViewById(R.id.date);
-        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM DD, YYYY");
+        SimpleDateFormat dateFormat = new SimpleDateFormat("MMM dd, yyyy");
         String dateToDisplay = dateFormat.format(date);
         dateTextView.setText(dateToDisplay);
 
         TextView timeTextView = (TextView) listItemView.findViewById(R.id.time);
-        SimpleDateFormat timeFormat = new SimpleDateFormat("HH:MM:SS a");
+        SimpleDateFormat timeFormat = new SimpleDateFormat("H:MM a");
         String timeToDisplay = timeFormat.format(date);
         timeTextView.setText(timeToDisplay);
 
